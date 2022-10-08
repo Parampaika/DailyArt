@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Picture</string>
+    <string name="picture_of_day">Picture of day</string>
+    <string name="register_app">Register App</string>
+    <string name="notifi">Войдите в свою учётную запись!</string>
+    <string name="btnSignIn">Войти</string>
+    <string name="btnRegister">Зарегестрироваться</string>
+</resources>
