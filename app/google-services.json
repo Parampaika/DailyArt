@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "516092053098",
+    "project_id": "picturedail",
+    "storage_bucket": "picturedail.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:516092053098:android:ee2895b4e2fb7125386c13",
+        "android_client_info": {
+          "package_name": "com.example.myapplication"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "516092053098-9inseir9f8uuf6ahtkdj54mv7o6aqi1t.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBTv1FE82YbkcFJ_f7Yp42jRJYJXozClCw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "516092053098-9inseir9f8uuf6ahtkdj54mv7o6aqi1t.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

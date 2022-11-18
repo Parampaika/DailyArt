@@ -61,9 +61,11 @@ public class MainActivity extends AppCompatActivity {
                 showSignInWindow();
             }
         });
+
     }
 
     private void showSignInWindow() {
+
         AlertDialog.Builder dialog = new AlertDialog.Builder(this);
         dialog.setTitle("Войти");
         dialog.setMessage("Введите все данные для входа");
@@ -157,29 +159,22 @@ public class MainActivity extends AppCompatActivity {
                 }
 
 
-                auth.createUserWithEmailAndPassword(email.getText().toString(), pass.getText().toString())
-                        .addOnSuccessListener(new OnSuccessListener<AuthResult>() {
+                FirebaseAuth.getInstance()
+                        .createUserWithEmailAndPassword(email.getText().toString(), pass.getText().toString())
+                        .addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                             @Override
-                            public void onSuccess(AuthResult authResult) {
-                                User user = new User();
-                                user.setEmail(email.getText().toString());
-                                user.setName(name.getText().toString());
-                                user.setPhone(phone.getText().toString());
-                                user.setPass(pass.getText().toString());
+                            public void onComplete(@NonNull Task<AuthResult> task) {
+                                if(task.isSuccessful()) {
 
-                                users.child(FirebaseAuth.getInstance().getCurrentUser().getUid())
-                                        .setValue(user)
-                                        .addOnSuccessListener(new OnSuccessListener<Void>() {
-                                            @Override
-                                            public void onSuccess(Void unused) {
-                                                Snackbar.make(root, "Ура", Snackbar.LENGTH_SHORT).show();
-                                            }
-                                        });
+                                }
                             }
                         });
+
+
             }
 
         });
         dialog.show();
+
     }
 }
